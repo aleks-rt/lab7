@@ -1,0 +1,29 @@
+create table humans
+(
+    id_user       integer,
+    id            serial,
+    name          varchar,
+    coordinates_x double precision,
+    coordinates_y double precision,
+    creationdate  varchar,
+    realhero      boolean,
+    hastoothpick  boolean,
+    impactspeed   double precision,
+    weapontype    varchar,
+    mood          varchar,
+    car_name      varchar
+);
+
+create table users
+(
+    id       serial,
+    login    varchar,
+    password varchar
+);
+
+create unique index users_login_uindex
+    on users (login);
+
+create sequence humans_id_seq;
+
+create sequence users_id_seq;
